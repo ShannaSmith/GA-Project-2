@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const usersCtrl = require('../controllers/owners')
+const isLoggedIn = require('../config/auth');
 router.get('/', usersCtrl.index);
 //get Owners/new
-router.get('/new', usersCtrl.new);
+router.get('/new',isLoggedIn, usersCtrl.new);
 //owners
 router.get('/:id', usersCtrl.show);
 //Post maintenance

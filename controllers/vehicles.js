@@ -1,5 +1,5 @@
 const res = require('express/lib/response');
-const Schedule = require('../models/schedule');
+const Service = require('../models/service');
 const Vehicle = require('../models/vehicle');
 
 

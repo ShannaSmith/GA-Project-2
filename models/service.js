@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const scheduleSchema = new Schema({
+const serviceSchema = new Schema({
     owner:{
         type: mongoose.Schema.Types.ObjectId
     },
-    service:{
+    workTodo:{
         Type: [String]
     },
     completed:{
@@ -18,4 +18,4 @@ const scheduleSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Schedule', scheduleSchema);
+module.exports = mongoose.model('Service', serviceSchema);

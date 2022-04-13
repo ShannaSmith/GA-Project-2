@@ -17,6 +17,10 @@ const app = express();
 require('./config/database');
 // configure Passport
 require('./config/passport');
+const indexRouter = require('./routes/index');
+const schedulesRouter = require('./routes/schedules');
+const usersRouter = require('./routes/users');
+const vehiclesRouter = require('./routes/vehicles');
 
 
 
@@ -50,7 +54,10 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
-
+app.use('/users', usersRouter);
+app.use('/vehicles', vehiclesRouter);
+app.use('/schedules', schedulesRouter);
+app.use('/index', indexRouter)
 
 // invalid request, send 404 page
 app.use(function(req, res) {

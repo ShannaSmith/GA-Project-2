@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //create new module
 const vehicleSchema = new Schema({
-    user:{
+    userId:{
         type:mongoose.Schema.Types.ObjectId
     },
     vin:{
@@ -20,7 +20,7 @@ const vehicleSchema = new Schema({
         min:1908,
         max:2030
     },
-   serviceSchedule:{
+   serviceId:{
        type:mongoose.Schema.Types.ObjectId
    },
    vehicleNickname:{

@@ -1,12 +1,12 @@
 const res = require('express/lib/response');
-const Schedule = require('../models/schedule');
+const Service = require('../models/service');
 const Vehicle = require('../models/vehicle');
 
 function show(req,res){
     user.findById(req.params.id, function(err, user){
         console.log(user)
-        Schedule.find({user: user._id}, function(err, schedules){
-            res.render('user/show', { schedules, title: 'Maintenance Schedule', schedule});
+        Service.find({user: user._id}, function(err, schedules){
+            res.render('user/show', { schedules, title: 'Maintenance Schedule', services});
         })
     })
 }

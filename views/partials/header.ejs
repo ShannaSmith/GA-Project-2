@@ -7,17 +7,17 @@
   </head>
   <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(223,240,253);">
-    <a class="navbar-brand" href="#">Maintenance Minder</a>
+    <a class="navbar-brand" href="/">Maintenance Minder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <% if (user) { %>
     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
       <div class="navbar-nav d-lg-inline-flex flex-lg-row-reverse">
-        <a class="nav-item nav-link active" href="/login" >Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="/index" >Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="/vehicles"<%-  title === 'All Vehicles' ? 'class="active"' : '' %>>Vehicles</a>
        
-        <a class="nav-item nav-link" href="/schedules/show"<%-  %> ></a>
+        <a class="nav-item nav-link" href="/services/show"<%-  %> ></a>
         <a class="nav-item nav-link disabled" href="#">Log</a>
         <a class="nav-item nav-link disabled" href="#">Log</a>
         <a class="nav-item nav-link disabled" href="/logout">Log Out</a>
