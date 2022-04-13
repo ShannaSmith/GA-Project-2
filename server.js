@@ -6,7 +6,7 @@ const session = require('express-session');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
-const indexRoutes = require('./routes/index');
+const exporessLayouts = require('express-ejs-layouts');
 // load the env consts
 require('dotenv').config();
 
@@ -18,13 +18,21 @@ require('./config/database');
 // configure Passport
 require('./config/passport');
 const indexRouter = require('./routes/index');
-const schedulesRouter = require('./routes/schedules');
+const servicesRouter = require('./routes/services');
 const usersRouter = require('./routes/users');
 const vehiclesRouter = require('./routes/vehicles');
 
+const checkAuth = (req, res, next) => {
+  if (req.user) {
+    next();
+  } else {
+    res.redirect('/');
+  }
+}
 
 
 // view engine setup
+app.use(exporessLayouts);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -52,12 +60,13 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.locals.jsonToStr = obj => JSON.stringify(obj);
+
 // mount all routes with appropriate base paths
-app.use('/', indexRoutes);
 app.use('/users', usersRouter);
-app.use('/vehicles', vehiclesRouter);
-app.use('/schedules', schedulesRouter);
-app.use('/index', indexRouter)
+app.use('/vehicles', checkAuth, vehiclesRouter);
+app.use('/services', checkAuth, servicesRouter);
+app.use('/', indexRouter);
 
 // invalid request, send 404 page
 app.use(function(req, res) {

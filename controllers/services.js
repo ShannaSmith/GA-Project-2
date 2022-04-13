@@ -1,69 +1,66 @@
-const res = require('express/lib/response');
-const Service = require('../models/service');
-
-
+const res = require("express/lib/response");
+const Service = require("../models/service");
 
 module.exports = {
-	index,
-	show,
-	new: newService,
-	create,
-	delete: deleteService,
-	edit
+  index,
+  show,
+  new: newService,
+  create,
+  destroy,
+  update,
+};
+
+async function update(req, res) {
+  try {
+    const service = await Service.findByIdAndUpdate(
+      req.params.id,
+      { completed: req.body.completed },
+      { new: true }
+    );
+    res.send(service);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
+async function create(req, res) {
+  req.body.owner = req.user._id;
+  try {
+    await Service.create(req.body);
+    res.redirect(`/services/vehicles/${req.body.vehicleId}`);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
+async function index(req, res) {
+  try {
+    const services = await Service.find({ vehicleId: req.params.id });
+    res.render("services/index", { services });
+  } catch (err) {
+    res.status(500).send(err);
+  }
+}
+
+function show(req, res) {
+  res.render("services/show", {
+    serviceNum: req.params.id,
+    service: Service.getOne(req.params.id),
+  });
+}
+
+function newService(req, res) {
+  res.locals.query = req.query;
+  res.render("services/new");
+}
+
+async function destroy(req, res) {
 	
+  try {
+    await Service.findByIdAndDelete(req.params.id);
+    res.redirect(`/services/vehicles/${req.body.vehicleId}`);
+  } catch (err) {
+	console.log(req.params, " < - req.params in show function");
+    res.status(500).send(err);
+  }
 }
-
-function edit(req, res){
-  
-	res.render('services/edit', {
-		service: Schedule.getOne(req.params.id)
-	})
-}
-
-function deleteService(req, res){
-	console.log(req.params.id);
-	Service.deleteOne(req.params.id)
-	// Where do we want the client to go after they delete something?
-	res.redirect('/services')
-}
-
-function create(req, res){
-	console.log(req.body, ' <- req.body, contents of the form')
-	// respond with a redirect
-
-	// Logic adding to the database using the model
-	Service.create(req.body)
-
-	res.redirect('/services'); // takes an url endpoint <- referring to a route
-}
-
-
-function index(req, res){
-
-	res.render('services/index', {
-		service: Service.getAll()
-	})
-}
-
-function show(req, res){
-	console.log(req.params,  " < - req.params in show function")
-	res.render('services/show', {
-		serviceNum: req.params.id,
-		service: Service.getOne(req.params.id)
-	})
-}
-
-
-function newService(req, res){
-	res.render('services/new')
-} 
-
-
-
-
-
-
-
-
-
-

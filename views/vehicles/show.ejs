@@ -1,0 +1,19 @@
+<div class="card text-white bg-primary mb-3" style="max-width: 30rem">
+  <h1><%= nickname %></h1>
+  VIN:
+  <p><%= vin %></p>
+  MAKE:
+  <p><%= make %></p>
+  MODEL:
+  <p><%= model %></p>
+  YEAR:
+  <p><%= year %></p>
+
+  <br />
+  <br />
+  <br />
+
+  <a href="/services/new?vehicleId=<%= _id %>">Add a service</a>
+
+  <a href="/services/vehicles/<%= _id %>">See Services</a>
+</div>
