@@ -17,6 +17,15 @@ function create(req, res){
     });
     };
 
+    function newVehicle(req, res){
+        res.render('vehicles/new', {
+            title: 'Get Vehicle',
+            VehicleId: req.params.id,
+        })
+    }
+    
+
     module.exports = {
-        create
+        create,
+        new: newVehicle
     };

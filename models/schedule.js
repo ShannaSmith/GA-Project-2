@@ -5,8 +5,7 @@ const scheduleSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId
     },
     service:{
-        Type: String,
-        enum:['oil/ filter change', 'tire rotation', 'air filter change', 'check brake fluid', "check coolant", "check windshield washer fluid", "check transmission fluids", "tune-up", "emissions test" ]
+        Type: [String]
     },
     completed:{
         type:Boolean
