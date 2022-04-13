@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //create new module
 const vehicleSchema = new Schema({
-    owner:{
+    user:{
         type:mongoose.Schema.Types.ObjectId
     },
     vin:{
@@ -15,10 +15,16 @@ const vehicleSchema = new Schema({
         type: String
     },
     year:{
-        type: Date
+        type: Number,
+        required: true,
+        min:1908,
+        max:2030
     },
    serviceSchedule:{
        type:mongoose.Schema.Types.ObjectId
-   }
+   },
+   vehicleNickname:{
+    type: String
+}
 });
-module.exports = mongoosemodel('Vehicle', vehicleSchema);
+module.exports = mongoose.model('Vehicle', vehicleSchema);

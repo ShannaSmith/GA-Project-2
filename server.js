@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
 // session middleware
+const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 // load the env consts

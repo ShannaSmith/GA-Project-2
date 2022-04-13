@@ -2,25 +2,18 @@ const mongoose = require('mongoose');
 //shortcut to mongoose Schema class
 const Schema = mongoose.Schema;
 // Create your User Model
-const ownerSchema = new Schema({
+const userSchema = new Schema({
     name: {
         type: String
     },
     email:{
-        type: String
+        type: String,
+        avatar: String
     },
     googleId:{
-        type: String
-    },
-    vehicleNickname:{
-        type: String
+        type: String,
+        required: true
     }
+});
 
-}
-);
-
-  
-
-
-
-module.exports = mongoosemodel('Owner', ownerSchema);
+module.exports = mongoose.model('User', userSchema);

@@ -4,7 +4,7 @@ const scheduleSchema = new Schema({
     owner:{
         type: mongoose.Schema.Types.ObjectId
     },
-    Service:{
+    service:{
         Type: String,
         enum:['oil/ filter change', 'tire rotation', 'air filter change', 'check brake fluid', "check coolant", "check windshield washer fluid", "check transmission fluids", "tune-up", "emissions test" ]
     },

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const serviceSchedulesCtrl = require('../controllers/serviceSchedules');
+const schedulesCtrl = require('../controllers/serviceSchedules');
 
-router.post('/owners/:id/schedules', serviceSchedulesCtrl.create);
-router.get('/owners/:id/schedules', serviceSchedulesCtrl);
+router.post('/users/:id/schedules', schedulesCtrl.create);
+router.get('/users/:id/schedules', schedulesCtrl.new);
 modules.export = router;
