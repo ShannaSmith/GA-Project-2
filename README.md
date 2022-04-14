@@ -7,22 +7,22 @@ This web app utilizes OAuth authentication. It has been implemented to restrict 
 To build and deploy a full-stack CRUD application from models - controllers, using Model-View-Controller (MVC) organization.
 
 ![car detailing](https://i.imgur.com/Y1TEByX.png)
-# Key Features
-* 🗂️Create and maintain a index of your vehicles ( VIN, make, model, and year)
+# 🔑 Key Features
+* 🗂️ Create and maintain a index of your vehicles ( VIN, make, model, and year)
 * 🗓️ Create and maintain a separate service schedule for each vehicle in your index
 * 🗄️ Maintain a record of completed services and the date they were provided
 
-## 💾Technologies Used
+## 💾 Technologies Used
 ### Node|  Express  |  MongoDB  |  Embedded JavaScript  |   JavaScript ES6  |   HTML  |   CSS  |   Passport  |   Google API OAuth2.0  |   Heroku  |     MongoDB Atlas  |  Bootstrap
 
 
-# 🏁Getting  Started
+# 🏁 Getting  Started
 
- 👀[ View Maintence Minder project planning](https://trello.com/b/7PL5xh5Y/car-maintenace)
+ 👀 [ View Maintence Minder project planning](https://trello.com/b/7PL5xh5Y/car-maintenace)
 
 1. Click the link below to be redirected to the Maintence Minder web application
 
-🖱️[Maintenance Minder](https://maintenance-minder.herokuapp.com/)
+🖱️ [Maintenance Minder](https://maintenance-minder.herokuapp.com/)
 
 2. Login using your Google account
 3. Create your first vehicle and click the add vehicle link
@@ -31,7 +31,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 6. Click "see services" to view, use, and edit your service schedule
 7. Logout when you're finished
 8. 
-## ⏭️Next Steps
+## ⏭️ Next Steps
 * Intergrate Google's calendar API  to allow users to add their maintenace service appointments to their calendar.
 * Add the remaining 'icebox' items from my Trello list
 
