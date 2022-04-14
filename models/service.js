@@ -20,7 +20,7 @@ const serviceSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Vehicle",
     required: true
-  },
+  } 
 });
 
 module.exports = mongoose.model("Service", serviceSchema);

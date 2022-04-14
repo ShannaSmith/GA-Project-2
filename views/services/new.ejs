@@ -3,23 +3,28 @@
   <div class="card-body">
     <h5 class="card-title">Add Service</h5>
     <form action="/services" method="POST" autocomplete="off">
-      Name:
+      <div class="form-group">
+      <label for="exampleInputEmail1">Type of Service</label>
       <input
-        placeholder="What is the work to do?"
+        placeholder="ex. Oil Change"
         type="text"
-        name="workTodo"
-      />
-      <br />
-      Date:
+        name="workTodo"/>
+        
+      </div>
+      
+      <div class="form-group">
+      <label for="exampleInputEmail1">Date of Service</label>
       <input
         type="date"
         name="date"
-        placeholder="what date do you want this service?"
+        placeholder="choose date of service?"
       />
+      
+    </div>
       <br />
       <input type="hidden" name="vehicleId" value="<%= query.vehicleId %>" />
       <br />
-      <button class="btn btn-success" type="submit">Add Service</button>
+      <button class="btn btn-success" type="submit">Submit</button>
     </form>
   </div>
 </div>

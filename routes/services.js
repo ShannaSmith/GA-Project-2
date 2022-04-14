@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/', servicesCtrl.create);
 router.get('/new', servicesCtrl.new);
-router.get('/vehicles/:id', servicesCtrl.index);
+router.get('/:id', servicesCtrl.index);
 router.put('/:id', servicesCtrl.update);
 router.post('/:id', servicesCtrl.destroy);
 

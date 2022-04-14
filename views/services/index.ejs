@@ -1,15 +1,14 @@
 <div class="card text-white bg-primary mb-3" style="max-width: 45rem">
-    <div class="card-header">Header</div>
+    <div class="card-header"> Schedule</div>
     <div class="card-body">
       <h1 class="card-title">Services</h1>
       <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Work To Do</th>
+            <th scope="col">Scheduled Service</th>
             <th scope="col">Date</th>
             <th scope="col">Completed</th>
-            <th scope="col">More Info.</th>
             <th scope="col">Delete</th>
           </tr>
         </thead>
@@ -20,7 +19,6 @@
             <td><%= v.workTodo %></td>
             <td><%= v.date.toString().slice(0, 10) %></td>
             <td><input type="checkbox" value=<%= v.completed %> id="<%= v._id %>" /> </td>
-            <td><a href="/services/<%= v._id %>">Open</a></td>
             <td>
                 <form
                 action="/services/<%= v.id %>"
@@ -28,13 +26,16 @@
                 method="POST"
               >
                 <input type="hidden" name="vehicleId" value="<%= v.vehicleId %>" />
-                <button type="submit">DELETE</button>
+                <button class="btn btn-danger  btn-sm" type="submit">DELETE</button>
               </form>
             </td>
-          </tr>
-          <% }); %>
+                <% }); %> 
+        </tr>
+          
         </tbody>
-      </table>
+        
+       
+        <a href="/services/new?vehicleId=<%= services._id %>" class="list-group-item list-group-item-action">Click to add additional services</a>
     </div>
   </div>
   

@@ -2,14 +2,7 @@ const res = require('express/lib/response');
 const Service = require('../models/service');
 const Vehicle = require('../models/vehicle');
 
-function show(req,res){
-    user.findById(req.params.id, function(err, user){
-        console.log(user)
-        Service.find({user: user._id}, function(err, schedules){
-            res.render('user/show', { schedules, title: 'Maintenance Schedule', services});
-        })
-    })
-}
+
 
 function create(req, res){
     console.log(req.body);
@@ -23,6 +16,6 @@ function create(req, res){
     };
 
 module.exports = {
-    show,
+    
     create
 };

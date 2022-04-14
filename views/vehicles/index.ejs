@@ -1,5 +1,5 @@
 <div class="card text-white bg-primary mb-3" style="max-width: 30rem">
-  <div class="card-header">Header</div>
+  <div class="card-header">Welcome!</div>
   <div class="card-body">
     <h5 class="card-title">Vehicles</h5>
     <table class="table table-striped">
@@ -12,27 +12,29 @@
         </tr>
       </thead>
       <tbody>
+       
         <% vehicles.forEach((v, index) => { %>
+          <%if(user && v.userId.equals(v.users)){%>  
         <tr>
           <td><%= index + 1 %></td>
           <td><%= v.nickname %></td>
           <td><a href="/vehicles/<%= v._id %>?_method=DELETE">Open</a></td>
           <td>
+           
             <form
-              action="/vehicles/<%= v.id %>"
               class="delete-form"
               method="POST"
             >
-              <button type="submit">DELETE</button>
+              <button class="btn btn-danger  btn-sm" type="submit">DELETE</button>
             </form>
           </td>
-        </tr>
+        </tr><% }; %>
         <% }); %>
       </tbody>
     </table>
 
     <br /><br /><br />
 
-    <a href="/vehicles/new">Add vehicle</a>
+    <a href="/vehicles/new"  class="link-success">Add vehicle</a>
   </div>
 </div>

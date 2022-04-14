@@ -27,7 +27,7 @@ async function create(req, res) {
   req.body.owner = req.user._id;
   try {
     await Service.create(req.body);
-    res.redirect(`/services/vehicles/${req.body.vehicleId}`);
+    res.redirect(`/services/${req.body.vehicleId}`);
   } catch (err) {
     res.status(500).send(err);
   }

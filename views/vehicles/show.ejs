@@ -1,5 +1,8 @@
 <div class="card text-white bg-primary mb-3" style="max-width: 30rem">
-  <h1><%= nickname %></h1>
+    <div class="card-header"><%= nickname %></div>
+    <div class="card-body">
+  
+  
   VIN:
   <p><%= vin %></p>
   MAKE:
@@ -12,8 +15,9 @@
   <br />
   <br />
   <br />
+  <div class="list-group">
+  <a href="/services/new?vehicleId=<%= _id %>" class="list-group-item list-group-item-action">Add a service</a>
 
-  <a href="/services/new?vehicleId=<%= _id %>">Add a service</a>
-
-  <a href="/services/vehicles/<%= _id %>">See Services</a>
+  <a href="/services/<%= _id %>" class="list-group-item list-group-item-action">See Services</a>
+  </div>
 </div>
