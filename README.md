@@ -23,6 +23,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 1. Click the link below to be redirected to the Maintence Minder web application
 
 🖱️[Maintenance Minder](https://maintenance-minder.herokuapp.com/)
+
 2. Login using your Google account
 3. Create your first vehicle and click the add vehicle link
 4. Enter your vehicle's information on the following page
