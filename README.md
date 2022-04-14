@@ -6,14 +6,14 @@ This web app utilizes OAuth authentication. It has been implemented to restrict 
 ## Objective 
 To build and deploy a full-stack CRUD application from models - controllers, using Model-View-Controller (MVC) organization.
 
-![car detailing](https://i.imgur.com/3EAVvAq.png)
+![car detailing](https://imgur.com/Y1TEByX")
 # Key Features
 * 🗂️Create and maintain a index of your vehicles ( VIN, make, model, and year)
 * 🗓️ Create and maintain a separate service schedule for each vehicle in your index
 * 🗄️ Maintain a record of completed services and the date they were provided
 
 ## Technologies Used
-### Node|Express|MongoDB|Embedded JavaScript| JavaScript ES6| HTML| CSS| Passport| Google API OAuth2.0| Heroku| MongoDB Atlas|Bootstrap
+### Node|  Express  |  MongoDB  |  Embedded JavaScript  |   JavaScript ES6  |   HTML  |   CSS  |   Passport  |   Google API OAuth2.0  |   Heroku  |     MongoDB Atlas  |  Bootstrap
 
 
 # Getting  Started
@@ -21,6 +21,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
  👀[ View Maintence Minder project planning](https://trello.com/b/7PL5xh5Y/car-maintenace)
 
 1. Click the link below to be redirected to the Maintence Minder web application
+
 🖱️[Maintenance Minder](https://maintenance-minder.herokuapp.com/)
 2. Login using your Google account
 3. Create your first vehicle and click the add vehicle link
