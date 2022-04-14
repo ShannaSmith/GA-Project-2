@@ -1,5 +1,6 @@
 const res = require("express/lib/response");
 const Service = require("../models/service");
+const Vehicle = require("../models/vehicle");
 
 module.exports = {
   index,
@@ -36,7 +37,8 @@ async function create(req, res) {
 async function index(req, res) {
   try {
     const services = await Service.find({ vehicleId: req.params.id });
-    res.render("services/index", { services });
+    const vehicle = await Vehicle.findById(req.params.id);
+    res.render("services/index", { services, nickname: vehicle.nickname });
   } catch (err) {
     res.status(500).send(err);
   }

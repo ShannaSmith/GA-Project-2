@@ -5,7 +5,7 @@ const Vehicle = require("../models/vehicle");
 async function index(req, res) {
   try {
     const vehicles = await Vehicle.find();
-    res.render("vehicles", { vehicles });
+   res.render("vehicles", { vehicles});
   } catch (err) {
     res.status(500).send(err);
   }

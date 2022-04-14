@@ -14,7 +14,8 @@
       <tbody>
        
         <% vehicles.forEach((v, index) => { %>
-          <%if(user && v.userId.equals(v.users)){%>  
+         
+          <%if(user && user._id.equals(v.userId)){%>  
         <tr>
           <td><%= index + 1 %></td>
           <td><%= v.nickname %></td>
