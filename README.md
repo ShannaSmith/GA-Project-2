@@ -1,4 +1,4 @@
-# 🔧 Maintenance Minder ⚠️ 🚘
+# 🔧 Maintenance Minder  ⚠️ 🚘
 Maintenance Minder allows you to create and maintain a schedule of routine maintenance service for your vehicle(s).
 Use this application to keep track of routine  service requirements like  oil chages, wheel alignment check, etc... and prolong the life of your vehicle.
 This web app utilizes OAuth authentication. It has been implemented to restrict access to create, Use, Delete (CUD) data operations, by protecting these routes from anonymous users, with isLoggedIN middleware. Controller functions utilize OAuth to ensure that editing and deleting data can only be accomplished by the user tht created that data. 
