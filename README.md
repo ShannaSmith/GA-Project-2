@@ -33,7 +33,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 8. 
 ## ⏭️ Next Steps
 * Intergrate Google's calendar API  to allow users to add their maintenace service appointments to their calendar.
-* Add the remaining 'icebox' features from my Trello list
+* Add the remaining 'icebox' features on my Trello list
 
  
 
