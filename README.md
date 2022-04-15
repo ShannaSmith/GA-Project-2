@@ -8,7 +8,7 @@ This web app utilizes OAuth authentication. It has been implemented to restrict 
 To build and deploy a full-stack CRUD application from models - controllers, using Model-View-Controller (MVC) organization.
 <br/>
 <br/>
-![car detailing](https://i.imgur.com/Y1TEByX.png)
+![car detailing](https://imgur.com/Y2KoPP4)
 <br/>
 # 🔑 Key Features
 * 🗂️ Create and maintain a index of your vehicles ( VIN, make, model, and year)
