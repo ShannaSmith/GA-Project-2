@@ -16,7 +16,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 * 🗄️ Maintain a record of completed services and the date they were provided
 
 # 💾 Technologies Used
-<h3 align="center"> Node|  Express  |  MongoDB  |  Embedded JavaScript  |   JavaScript ES6  |   HTML  |   CSS  |   Passport  |   Google API OAuth2.0|    Heroku  |     MongoDB Atlas  |  Bootstrap</h3>
+<h3 align="center"> Node|  Express  |  MongoDB  |  Embedded JavaScript  |   JavaScript ES6  |  CSS  |   Passport  |   Google API OAuth2.0|    Heroku  |     MongoDB Atlas  |  Bootstrap</h3>
 
 
 # 🏁 Getting  Started
