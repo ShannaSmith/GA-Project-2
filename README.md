@@ -4,7 +4,9 @@ Use this application to keep track of routine  service requirements like  oil ch
 This web app utilizes OAuth authentication. It has been implemented to restrict access to create, Use, Delete (CUD) data operations, by protecting these routes from anonymous users, with isLoggedIN middleware. Controller functions utilize OAuth to ensure that editing and deleting data can only be accomplished by the user tht created that data. 
 
 ## 🎯 Objective 
+
 To build and deploy a full-stack CRUD application from models - controllers, using Model-View-Controller (MVC) organization.
+<br/>
 <br/>
 ![car detailing](https://i.imgur.com/Y1TEByX.png)
 <br/>
