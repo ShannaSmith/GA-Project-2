@@ -11,9 +11,9 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 ![car detailing](https://i.imgur.com/Y2KoPP4.png)
 <br/>
 # 🔑 Key Features
-* 🗂️ Create and maintain a index of your vehicles ( VIN, make, model, and year)
+* 🗂️ Create and maintain an index of your vehicles ( VIN, make, model, and year)
 * 🗓️ Create and maintain a separate service schedule for each vehicle in your index
-* 🗄️ Maintain a record of completed services and the date they were provided
+* 🗄️ Maintain a record of completed services and the date they occurred
 
 # 💾 Technologies Used
 <h3 align="center"> Node|  Express  |  MongoDB  |  Embedded JavaScript  |   JavaScript ES6  |  CSS  |   Passport  |   Google API OAuth2.0|    Heroku  |     MongoDB Atlas  |  Bootstrap</h3>
