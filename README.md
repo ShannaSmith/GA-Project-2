@@ -30,7 +30,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 2. Login using your Google account
 3. Create your first vehicle and click the add vehicle link
 4. Enter your vehicle's information on the following page
-5. Click the Open link under "more info" . Here you will  view your vehicle's information and have the option to both add and review maintenance service items
+5. Click the Open link under "more info". Here you will  view your vehicle's information and have the option to both add and review maintenance service items
 6. Click "see services" to view, use, and edit your service schedule
 7. Logout when you're finished
 8. 
