@@ -33,7 +33,8 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 5. Click the Open link under "more info". Here you will  view your vehicle's information and have the option to both add and review maintenance service items
 6. Click "see services" to view, use, and edit your service schedule
 7. Logout when you're finished
-8. 
+
+
 ## ⏭️ Next Steps
 * Intergrate Google's calendar API  to allow users to add their maintenace service appointments to their calendar.
 * Add the remaining 'icebox' features on my Trello list
