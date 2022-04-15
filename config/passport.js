@@ -14,7 +14,9 @@ passport.use(
     // The verify callback function
     function (accessToken, refreshToken, profile, cb) {
       // a user has logged in via OAuth!
-      User.findOne({ googleId: profile.id }, function (err, user) {
+      console.log(profile);
+      console.log('this profile ^ from google---------------------');
+      User.findOne({googleId: profile.id }, function (err, user) {
         // refer to the lesson plan from earlier today in order to set this up
 
         if (user) return cb(null, user);

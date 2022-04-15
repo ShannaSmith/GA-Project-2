@@ -1,5 +1,5 @@
 const res = require("express/lib/response");
-const Service = require("../models/service");
+const User = require("../models/user");
 const Vehicle = require("../models/vehicle");
 
 async function index(req, res) {
@@ -45,6 +45,7 @@ async function destroy(req, res) {
     res.status(500).send(err);
   }
 }
+
 
 module.exports = {
   create,

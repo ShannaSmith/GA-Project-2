@@ -23,9 +23,11 @@
           <td>
            
             <form
+            action="/vehicles/<%= v.id %>"
               class="delete-form"
               method="POST"
             >
+            <input type="hidden" name="vehicleId" value="<%= v.vehicleId %> "/>
               <button class="btn btn-danger  btn-sm" type="submit">DELETE</button>
             </form>
           </td>

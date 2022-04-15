@@ -56,11 +56,12 @@ function newService(req, res) {
   res.render("services/new");
 }
 
+
 async function destroy(req, res) {
 	
   try {
     await Service.findByIdAndDelete(req.params.id);
-    res.redirect(`/services/vehicles/${req.body.vehicleId}`);
+    res.redirect(`/services/${req.body.vehicleId}`);
   } catch (err) {
 	console.log(req.params, " < - req.params in show function");
     res.status(500).send(err);

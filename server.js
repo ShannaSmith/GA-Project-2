@@ -1,3 +1,5 @@
+// load the env consts
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 // session middleware
@@ -6,9 +8,7 @@ const session = require('express-session');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
-const exporessLayouts = require('express-ejs-layouts');
-// load the env consts
-require('dotenv').config();
+const expressLayouts = require('express-ejs-layouts');
 
 // create the Express app
 const app = express();
@@ -19,7 +19,6 @@ require('./config/database');
 require('./config/passport');
 const indexRouter = require('./routes/index');
 const servicesRouter = require('./routes/services');
-const usersRouter = require('./routes/users');
 const vehiclesRouter = require('./routes/vehicles');
 
 const checkAuth = (req, res, next) => {
@@ -32,10 +31,10 @@ const checkAuth = (req, res, next) => {
 
 
 // view engine setup
-app.use(exporessLayouts);
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(expressLayouts);
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
@@ -60,17 +59,29 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.locals.jsonToStr = obj => JSON.stringify(obj);
+//app.locals.jsonToStr = obj => JSON.stringify(obj);
 
 // mount all routes with appropriate base paths
-app.use('/users', usersRouter);
+
 app.use('/vehicles', checkAuth, vehiclesRouter);
 app.use('/services', checkAuth, servicesRouter);
 app.use('/', indexRouter);
 
-// invalid request, send 404 page
-app.use(function(req, res) {
-  res.status(404).send('Cant find that!');
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+
+ //error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
 module.exports = app;
