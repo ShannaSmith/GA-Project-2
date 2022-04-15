@@ -21,7 +21,7 @@ To build and deploy a full-stack CRUD application from models - controllers, usi
 
 # 🏁 Getting  Started
 
- 👀 [ View Maintence Minder project planning](https://trello.com/b/7PL5xh5Y/car-maintenace) ⬅️ Warning: clicking this link will redirect you to Trello.com
+ 👀 [ View Maintenance Minder project planning](https://trello.com/b/7PL5xh5Y/car-maintenace) ⬅️ Warning: clicking this link will redirect you to Trello.com
 
 1. Click the link below to be redirected to the Maintence Minder web application
 
